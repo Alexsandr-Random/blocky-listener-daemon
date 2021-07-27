@@ -1,0 +1,1224 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="blocky Documentation">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
+    
+    
+      
+        <title>Configuration - blocky</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ba0d045b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#009485">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="blocky" class="md-header__button md-logo" aria-label="blocky" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            blocky
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/0xERR0R/blocky/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="blocky" class="md-nav__button md-logo" aria-label="blocky" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    blocky
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/0xERR0R/blocky/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Configuration
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-configuration" class="md-nav__link">
+    Basic configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upstream-configuration" class="md-nav__link">
+    Upstream configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-dns" class="md-nav__link">
+    Custom DNS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-dns-resolution" class="md-nav__link">
+    Conditional DNS resolution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-name-lookup" class="md-nav__link">
+    Client name lookup
+  </a>
+  
+    <nav class="md-nav" aria-label="Client name lookup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-name-order" class="md-nav__link">
+    Single name order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-client-name-mapping" class="md-nav__link">
+    Custom client name mapping
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blocking-and-whitelisting" class="md-nav__link">
+    Blocking and whitelisting
+  </a>
+  
+    <nav class="md-nav" aria-label="Blocking and whitelisting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-black-and-whitelists" class="md-nav__link">
+    Definition black and whitelists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-groups" class="md-nav__link">
+    Client groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-type" class="md-nav__link">
+    Block type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-refresh-period" class="md-nav__link">
+    List refresh period
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caching" class="md-nav__link">
+    Caching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prometheus" class="md-nav__link">
+    Prometheus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-logging" class="md-nav__link">
+    Query logging
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#https-configuration-for-doh" class="md-nav__link">
+    HTTPS configuration (for DoH)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prometheus_grafana/" class="md-nav__link">
+        Prometheus / Grafana
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/" class="md-nav__link">
+        Interfaces
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network_configuration/" class="md-nav__link">
+        Network configuration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../additional_information/" class="md-nav__link">
+        Additional information
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-configuration" class="md-nav__link">
+    Basic configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upstream-configuration" class="md-nav__link">
+    Upstream configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-dns" class="md-nav__link">
+    Custom DNS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-dns-resolution" class="md-nav__link">
+    Conditional DNS resolution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-name-lookup" class="md-nav__link">
+    Client name lookup
+  </a>
+  
+    <nav class="md-nav" aria-label="Client name lookup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-name-order" class="md-nav__link">
+    Single name order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-client-name-mapping" class="md-nav__link">
+    Custom client name mapping
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blocking-and-whitelisting" class="md-nav__link">
+    Blocking and whitelisting
+  </a>
+  
+    <nav class="md-nav" aria-label="Blocking and whitelisting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-black-and-whitelists" class="md-nav__link">
+    Definition black and whitelists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-groups" class="md-nav__link">
+    Client groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-type" class="md-nav__link">
+    Block type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-refresh-period" class="md-nav__link">
+    List refresh period
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caching" class="md-nav__link">
+    Caching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prometheus" class="md-nav__link">
+    Prometheus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-logging" class="md-nav__link">
+    Query logging
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#https-configuration-for-doh" class="md-nav__link">
+    HTTPS configuration (for DoH)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/0xERR0R/blocky/edit/master/docs/configuration.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="configuration">Configuration</h1>
+<p>This chapter describes all configuration options in <code>config.yaml</code>. You can download a reference file with all
+configuration properties as <a href="../config.yml">JSON</a>.</p>
+<h2 id="basic-configuration">Basic configuration</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>port</td>
+<td>no</td>
+<td>53</td>
+<td>Port and optional bind ip address to serve <abbr title="Domain Name System">DNS</abbr> endpoint (<abbr title="Transmission Control Protocol">TCP</abbr> and <abbr title="User Datagram Protocol">UDP</abbr>). If you wish to specify a specific IP, you can do so such as 192.168.0.1:53. Example: 53, :53, :127.0.0.1:53</td>
+</tr>
+<tr>
+<td>httpPort</td>
+<td>no</td>
+<td></td>
+<td><abbr title="Hypertext Transfer Protocol">HTTP</abbr> listener port and optional bind ip address . If &gt; 0, will be used for prometheus metrics, pprof, <abbr title="Representational State Transfer">REST</abbr> <abbr title="Application Programming Interface">API</abbr>, <abbr title="DNS-over-HTTPS">DoH</abbr> ...If you wish to specify a specific IP, you can do so such as 192.168.0.1:4000. Example: 4000, :4000, 127.0.0.1:4000</td>
+</tr>
+<tr>
+<td>httpsPort</td>
+<td>no</td>
+<td></td>
+<td><abbr title="Hypertext Transfer Protocol Secure">HTTPS</abbr> listener port and optional bind ip address . If &gt; 0, will be used for prometheus metrics, pprof, <abbr title="Representational State Transfer">REST</abbr> <abbr title="Application Programming Interface">API</abbr>, <abbr title="DNS-over-HTTPS">DoH</abbr>... If you wish to specify a specific IP, you can do so such as 192.168.0.1:443</td>
+</tr>
+<tr>
+<td>httpsCertFile</td>
+<td>yes, if httpsPort &gt; 0</td>
+<td></td>
+<td>path to cert and key file for <abbr title="Secure Sockets Layer">SSL</abbr> encryption</td>
+</tr>
+<tr>
+<td>httpsKeyFile</td>
+<td>yes, if httpsPort &gt; 0</td>
+<td></td>
+<td>path to cert and key file for <abbr title="Secure Sockets Layer">SSL</abbr> encryption</td>
+</tr>
+<tr>
+<td>bootstrapDns</td>
+<td>no</td>
+<td></td>
+<td>use this <abbr title="Domain Name System">DNS</abbr> server to resolve blacklist urls and upstream <abbr title="Domain Name System">DNS</abbr> servers (<abbr title="DNS-over-HTTPS">DoH</abbr>). Useful if no <abbr title="Domain Name System">DNS</abbr> resolver is configured and blocky needs to resolve a host name. Format net:IP:port, net must be udp or tcp</td>
+</tr>
+<tr>
+<td>disableIPv6</td>
+<td>no</td>
+<td>false</td>
+<td>Drop all AAAA query if set to true</td>
+</tr>
+<tr>
+<td>logLevel</td>
+<td>no</td>
+<td>info</td>
+<td>Log level (one from debug, info, warn, error)</td>
+</tr>
+<tr>
+<td>logFormat</td>
+<td>no</td>
+<td>text</td>
+<td>Log format (text or json).</td>
+</tr>
+<tr>
+<td>logTimestamp</td>
+<td>no</td>
+<td>true</td>
+<td>Log time stamps (true or false).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">53</span>
+<span class="nt">httpPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4000</span>
+<span class="nt">httpsPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">443</span>
+<span class="nt">logLevel</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">info</span>
+</code></pre></div>
+</div>
+<h2 id="upstream-configuration">Upstream configuration</h2>
+<p>To resolve a <abbr title="Domain Name System">DNS</abbr> query, blocky needs external public or private <abbr title="Domain Name System">DNS</abbr> resolvers. Blocky supports <abbr title="Domain Name System">DNS</abbr> resolvers with
+following network protocols (net part of the resolver URL):</p>
+<ul>
+<li>udp (only <abbr title="User Datagram Protocol">UDP</abbr>)</li>
+<li>tcp (only <abbr title="Transmission Control Protocol">TCP</abbr>)</li>
+<li>tcp+udp (<abbr title="User Datagram Protocol">UDP</abbr> and <abbr title="Transmission Control Protocol">TCP</abbr>, dependent on query type)</li>
+<li>https (aka <abbr title="DNS-over-HTTPS">DoH</abbr>)</li>
+<li>tcp-tls (aka <abbr title="DNS-over-TLS">DoT</abbr>)</li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You can (and should!) configure multiple <abbr title="Domain Name System">DNS</abbr> resolvers. Blocky picks 2 random resolvers from the list for each query and
+returns the answer from the fastest one. This improves your network speed and increases your privacy - your <abbr title="Domain Name System">DNS</abbr> traffic
+will be distributed over multiple providers.</p>
+</div>
+<p>Each resolver must be defined as a string in following format: <code>[net:]host:[port][/path]</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Value</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>net</td>
+<td>no</td>
+<td>one of (tcp+udp, tcp, udp, tcp-tls or https)</td>
+<td>tcp+udp</td>
+</tr>
+<tr>
+<td>host</td>
+<td>yes</td>
+<td>full qualified domain name or ip address</td>
+<td></td>
+</tr>
+<tr>
+<td>port</td>
+<td>no</td>
+<td>number &lt; 65535</td>
+<td>53 for udp/tcp, 853 for tcp-tls and 443 for https</td>
+</tr>
+</tbody>
+</table>
+<p>Blocky needs at least the configuration of the <strong>default</strong> group. This group will be used as a fallback, if no client
+specific resolver configuration is available.</p>
+<p>You can use the client name (see <a href="#client-name-lookup">Client name lookup</a>), client's IP address or a client subnet as
+<abbr title="Classless Inter-Domain Routing">CIDR</abbr> notation.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can use <code>*</code> as wildcard for the sequence of any character or <code>[0-9]</code> as number range</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">upstream</span><span class="p">:</span>
+  <span class="nt">default</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">46.182.19.48</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">80.241.218.68</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">tcp-tls:fdns1.dismail.de:853</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://dns.digitale-gesellschaft.ch/dns-query</span>
+  <span class="nt">laptop*</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">123.123.123.123</span>
+  <span class="nt">10.43.8.67/28</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">1.1.1.1</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">9.9.9.9</span>
+</code></pre></div>
+<p>Use <code>123.123.123.123</code> as single upstream <abbr title="Domain Name System">DNS</abbr> resolver for client laptop-home, 
+<code>1.1.1.1</code> and <code>9.9.9.9</code> for all clients in the sub-net <code>10.43.8.67/28</code> and 4 resolvers (default) for all others clients.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong> Blocky needs at least one upstream <abbr title="Domain Name System">DNS</abbr> server </strong></p>
+</div>
+<p>See <a href="../additional_information/#list-of-public-dns-servers">List of public <abbr title="Domain Name System">DNS</abbr> servers</a> if you need some ideas, which
+public free <abbr title="Domain Name System">DNS</abbr> server you could use.</p>
+<h2 id="custom-dns">Custom <abbr title="Domain Name System">DNS</abbr></h2>
+<p>You can define your own domain name to IP mappings. For example, you can use a user-friendly name for a network printer
+or define a domain name for your local device on order to use the <abbr title="Hypertext Transfer Protocol Secure">HTTPS</abbr> certificate. Multiple IP addresses for one
+domain must be separated by a comma.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">customDNS</span><span class="p">:</span>
+  <span class="nt">mapping</span><span class="p">:</span>
+    <span class="nt">printer.lan</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">192.168.178.3</span> 
+    <span class="nt">otherdevice.lan</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">192.168.178.15,2001:0db8:85a3:08d3:1319:8a2e:0370:7344</span>
+</code></pre></div>
+</div>
+<p>This configuration will also resolve any subdomain of the defined domain. For example a query "printer.lan" or "
+my.printer.lan" will return 192.168.178.3 as IP address.</p>
+<h2 id="conditional-dns-resolution">Conditional <abbr title="Domain Name System">DNS</abbr> resolution</h2>
+<p>You can define, which <abbr title="Domain Name System">DNS</abbr> resolver(s) should be used for queries for the particular domain (with all sub-domains). This
+is for example useful, if you want to reach devices in your local network by the name. Since only your router know which
+hostname belongs to which IP address, all <abbr title="Domain Name System">DNS</abbr> queries for the local network should be redirected to the router.</p>
+<p>With the optional parameter <code>rewrite</code> you can replace domain part of the query with the defined part <strong>before</strong> the
+resolver lookup is performed.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">conditional</span><span class="p">:</span>
+  <span class="nt">rewrite</span><span class="p">:</span>
+    <span class="nt">example.com</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fritz.box</span>
+    <span class="nt">replace-me.com</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">with-this.com</span>
+  <span class="nt">mapping</span><span class="p">:</span>
+    <span class="nt">fritz.box</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">udp:192.168.178.1</span>
+    <span class="nt">lan.net</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">udp:192.170.1.2,udp:192.170.1.3</span>
+    <span class="c1"># for reverse DNS lookups of local devices</span>
+    <span class="nt">178.168.192.in-addr.arpa</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">udp:192.168.178.1</span>
+</code></pre></div>
+<p>In this example, a <abbr title="Domain Name System">DNS</abbr> query "client.fritz.box" will be redirected to the router's <abbr title="Domain Name System">DNS</abbr> server at 192.168.178.1 and client.lan.net to 192.170.1.2 and 192.170.1.3. 
+The query client.example.com will be rewritten to "client.fritz.box" and also redirected to the resolver at 192.168.178.1</p>
+</div>
+<p>In this example, a <abbr title="Domain Name System">DNS</abbr> query "client.fritz.box" will be redirected to the router's <abbr title="Domain Name System">DNS</abbr> server at 192.168.178.1 and
+client.lan.net to 192.170.1.2 and 192.170.1.3.</p>
+<h2 id="client-name-lookup">Client name lookup</h2>
+<p>Blocky can try to resolve a user-friendly client name from the IP address. This is useful for defining of blocking
+groups, since IP address can change dynamically. Blocky uses <abbr title="Reverse DNS">rDNS</abbr> to retrieve client's name. To use this feature, you
+can configure a <abbr title="Domain Name System">DNS</abbr> server for client lookup (typically your router). You can also define client names manually per IP
+address.</p>
+<h3 id="single-name-order">Single name order</h3>
+<p>Some routers return multiple names for the client (host name and user defined name). With
+parameter <code>clientLookup.singleNameOrder</code> you can specify, which of retrieved names should be used.</p>
+<h3 id="custom-client-name-mapping">Custom client name mapping</h3>
+<p>You can also map a particular client name to one (or more) IP (ipv4/ipv6) addresses. Parameter <code>clientLookup.clients</code>
+contains a map of client name and multiple IP addresses.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">clientLookup</span><span class="p">:</span>
+    <span class="nt">upstream</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">udp:192.168.178.1</span>
+    <span class="nt">singleNameOrder</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="nt">clients</span><span class="p">:</span>
+      <span class="nt">laptop</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">192.168.178.29</span>
+</code></pre></div>
+<p>Use <code>192.168.178.1</code> for <abbr title="Reverse DNS">rDNS</abbr> lookup. Take second name if present, if not take first name. IP address <code>192.168.178.29</code> is mapped to <code>laptop</code> as client name.</p>
+</div>
+<h2 id="blocking-and-whitelisting">Blocking and whitelisting</h2>
+<p>Blocky can download and use external lists with domains or IP addresses to block <abbr title="Domain Name System">DNS</abbr> query (e.g. advertisement, malware,
+trackers, adult sites). You can group several list sources together and define the blocking behavior per client.
+External blacklists must be in the well-known <a href="https://en.wikipedia.org/wiki/Hosts_(file)">Hosts format</a>.</p>
+<p>Blocky uses <a href="https://en.wikipedia.org/wiki/DNS_sinkhole"><abbr title="Domain Name System">DNS</abbr> sinkhole</a> approach to block a <abbr title="Domain Name System">DNS</abbr> query. Domain name from
+the request, IP address from the response, and the <abbr title="Canonical Name">CNAME</abbr> record will be checked against configured blacklists.</p>
+<p>To avoid overblocking, you can define or use already existing whitelists.</p>
+<h3 id="definition-black-and-whitelists">Definition black and whitelists</h3>
+<p>Each black or whitelist can be either a path to the local file, or a URL to download. All Urls must be grouped to a
+group name.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">blocking</span><span class="p">:</span>
+  <span class="nt">blackLists</span><span class="p">:</span>
+    <span class="nt">ads</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts</span>
+    <span class="nt">special</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts</span>
+  <span class="nt">whiteLists</span><span class="p">:</span>
+    <span class="nt">ads</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">whitelist.txt</span>
+</code></pre></div>
+<p>In this example you can see 2 groups: <strong>ads</strong> with 2 lists and <strong>special</strong> with one list. One local whitelist was defined for the <strong>ads</strong> group.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the same group has black and whitelists, whitelists will be used to disable particular blacklist entries.
+If a group has <strong>only</strong> whitelist entries -&gt; this means only domains from this list are allowed, all other domains will
+be blocked</p>
+</div>
+<h3 id="client-groups">Client groups</h3>
+<p>In this configuration section, you can define, which blocking group(s) should be used for which client in your network.
+Example: All clients should use the <strong>ads</strong> group, which blocks advertisement and kids devices should use the <strong>adult</strong>
+group, which blocky adult sites.</p>
+<p>Clients without a group assignment will use automatically the <strong>default</strong> group.</p>
+<p>You can use the client name (see <a href="#client-name-lookup">Client name lookup</a>), client's IP address or a client subnet as
+<abbr title="Classless Inter-Domain Routing">CIDR</abbr> notation.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">blocking</span><span class="p">:</span>
+    <span class="nt">clientGroupsBlock</span><span class="p">:</span>
+    <span class="c1"># default will be used, if no special definition for a client name exists</span>
+    <span class="nt">default</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ads</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">special</span>
+    <span class="nt">laptop*</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ads</span>
+    <span class="nt">192.168.178.1/24</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">special</span>
+    <span class="nt">kid-laptop</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ads</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">adult</span>
+</code></pre></div>
+<p>All queries from network clients, whose device name starts with <code>laptop</code>, will be filtered against the <strong>ads</strong> group's lists. All devices from the subnet <code>192.168.178.1/24</code> against the <strong>special</strong> group and <code>kid-laptop</code> against <strong>ads</strong> and <strong>adult</strong>. All other clients: <strong>ads</strong> and <strong>special</strong>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can use <code>*</code> as wildcard for the sequence of any character or <code>[0-9]</code> as number range</p>
+</div>
+<h3 id="block-type">Block type</h3>
+<p>You can configure, which response should be sent to the client, if a requested query is blocked (only for A and AAAA
+queries, <abbr title="Non-Existence Domain">NXDOMAIN</abbr> for other types):</p>
+<table>
+<thead>
+<tr>
+<th>blockType</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>zeroIP</strong></td>
+<td>zeroIP</td>
+<td>This is the **</td>
+</tr>
+<tr>
+<td>default** block type. Server returns 0.0.0.0 (or :: for IPv6) as result for A and AAAA queries</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>nxDomain</strong></td>
+<td>nxDomain</td>
+<td>return <abbr title="Non-Existence Domain">NXDOMAIN</abbr> as return code</td>
+</tr>
+<tr>
+<td>custom IPs</td>
+<td>192.100.100.15, 2001:0db8:85a3:08d3:1319:8a2e:0370:7344</td>
+<td>comma separated list of destination IP addresses. Should contain ipv4 and ipv6 to cover all query types. Useful with running web server on this address to display the "blocked" page.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">blocking</span><span class="p">:</span>
+  <span class="nt">blockType</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nxDomain</span>
+</code></pre></div>
+</div>
+<h3 id="list-refresh-period">List refresh period</h3>
+<p>To keep the list cache up-to-date, blocky will periodically download and reload all external lists. Default period is <strong>
+4 hours</strong>. You can configure this by setting the <code>blocking.refreshPeriod</code> parameter to a value in <strong>minutes</strong>. Negative
+value will deactivate automatically refresh.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">blocking</span><span class="p">:</span>
+  <span class="nt">refreshPeriod</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">60</span>
+</code></pre></div>
+<p>Refresh every hour.</p>
+</div>
+<h2 id="caching">Caching</h2>
+<p>Each <abbr title="Domain Name System">DNS</abbr> response has a <abbr title="Time-To-Live">TTL</abbr> (Time-to-live) value. This value defines, how long is the record valid in seconds. The
+values are maintained by domain owners, server administrators etc. Blocky caches the answers from all resolved queries
+in own cache in order to avoid repeated requests. This reduces the <abbr title="Domain Name System">DNS</abbr> traffic and increases the network speed, since
+blocky can serve the result immediately from the cache.</p>
+<p>With following parameters you can tune the caching behavior:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Wrong values can significantly increase external <abbr title="Domain Name System">DNS</abbr> traffic or memory consumption.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caching.minTime</td>
+<td>no</td>
+<td>0 (use <abbr title="Time-To-Live">TTL</abbr>)</td>
+<td>Amount in minutes, how long a response must be cached (min value). If &lt;=0, use response's <abbr title="Time-To-Live">TTL</abbr>, if &gt;0 use this value, if <abbr title="Time-To-Live">TTL</abbr> is smaller</td>
+</tr>
+<tr>
+<td>caching.maxTime</td>
+<td>no</td>
+<td>0 (use <abbr title="Time-To-Live">TTL</abbr>)</td>
+<td>Amount in minutes, how long a response must be cached (max value). If &lt;0, do not cache responses. If 0, use <abbr title="Time-To-Live">TTL</abbr>. If &gt; 0, use this value, if <abbr title="Time-To-Live">TTL</abbr> is greater</td>
+</tr>
+<tr>
+<td>caching.maxItemsCount</td>
+<td>no</td>
+<td>0 (unlimited)</td>
+<td>Max number of cache entries (responses) to be kept in cache (soft limit). Default (0): unlimited. Useful on systems with limited amount of RAM.</td>
+</tr>
+<tr>
+<td>caching.prefetching</td>
+<td>no</td>
+<td>false</td>
+<td>if true, blocky will preload <abbr title="Domain Name System">DNS</abbr> results for often used queries (default: names queried more than 5 times in a 2 hour time window). Results in cache will be loaded again on their expire (<abbr title="Time-To-Live">TTL</abbr>). This improves the response time for often used queries, but significantly increases external traffic. It is recommended to increase "minTime" to reduce the number of prefetch queries to external resolvers.</td>
+</tr>
+<tr>
+<td>caching.prefetchExpires</td>
+<td>no</td>
+<td>120</td>
+<td>Amount in minutes, prefetch track time window</td>
+</tr>
+<tr>
+<td>caching.prefetchThreshold</td>
+<td>no</td>
+<td>5</td>
+<td>Name queries threshold for prefetch</td>
+</tr>
+<tr>
+<td>caching.prefetchMaxItemsCount</td>
+<td>no</td>
+<td>0 (unlimited)</td>
+<td>Max number of domains to be kept in cache for prefetching (soft limit). Default (0): unlimited. Useful on systems with limited amount of RAM.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">caching</span><span class="p">:</span>
+  <span class="nt">minTime</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+  <span class="nt">maxTime</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
+  <span class="nt">prefetching</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+</div>
+<h2 id="prometheus">Prometheus</h2>
+<p>Blocky can expose various metrics for prometheus. To use the prometheus feature, the <abbr title="Hypertext Transfer Protocol">HTTP</abbr> listener must be enabled (
+see <a href="#basic-configuration">Basic Configuration</a>).</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prometheus.enable</td>
+<td>no</td>
+<td>false</td>
+<td>If true, enables prometheus metrics</td>
+</tr>
+<tr>
+<td>prometheus.path</td>
+<td>no</td>
+<td>/metrics</td>
+<td>URL path to the metrics endpoint</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">prometheus</span><span class="p">:</span>
+  <span class="nt">enable</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/metrics</span>
+</code></pre></div>
+</div>
+<h2 id="query-logging">Query logging</h2>
+<p>You can enable the logging of <abbr title="Domain Name System">DNS</abbr> queries (question, answer, client, duration etc) to a daily <abbr title="Comma-separated values">CSV</abbr> file. This file can be
+opened in Excel or OpenOffice writer for analyse purposes.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Query file contain sensitive information. Please ensure to inform users, if you log their queries.</p>
+</div>
+<p>Configuration parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>queryLog.dir</td>
+<td>no</td>
+<td></td>
+<td>If defined, directory for writing the logs</td>
+</tr>
+<tr>
+<td>queryLog.perClient</td>
+<td>no</td>
+<td>false</td>
+<td>if true, write one file per client. Writes all queries to single file otherwise</td>
+</tr>
+<tr>
+<td>queryLog.logRetentionDays</td>
+<td>no</td>
+<td>0</td>
+<td>if &gt; 0, deletes log files which are older than ... days</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Please ensure, that the log directory is writable. If you use docker, please ensure, that the directory is properly
+mounted (e.g. volume)</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">queryLog</span><span class="p">:</span>
+    <span class="nt">dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/logs</span>
+    <span class="nt">perClient</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="nt">logRetentionDays</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">7</span>
+</code></pre></div>
+</div>
+<h2 id="https-configuration-for-doh"><abbr title="Hypertext Transfer Protocol Secure">HTTPS</abbr> configuration (for <abbr title="DNS-over-HTTPS">DoH</abbr>)</h2>
+<p>See <a href="https://github.com/0xERR0R/blocky/wiki/Configuration-of-HTTPS-for-DoH-and-Rest-API">Wiki - Configuration of <abbr title="Hypertext Transfer Protocol Secure">HTTPS</abbr></a>
+for detailed information, how to configure <abbr title="Hypertext Transfer Protocol Secure">HTTPS</abbr>.</p>
+<p><abbr title="DNS-over-HTTPS">DoH</abbr> url: <code>https://host:port/dns-query</code></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Welcome" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Welcome
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../installation/" class="md-footer__link md-footer__link--next" aria-label="Next: Installation" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Installation
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/0xERR0R/blocky" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://hub.docker.com/r/spx01/blocky" target="_blank" rel="noopener" title="hub.docker.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.716f8af4.min.js"></script>
+      
+    
+  </body>
+</html>
